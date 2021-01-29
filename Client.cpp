@@ -62,7 +62,7 @@ void canceAutoStart()
 
 void Communication()
 {
-	WSADATA  Ws;
+    WSADATA  Ws;
     SOCKET ClientSocket;
     struct sockaddr_in ClientAddr;
     int Ret = 0;
