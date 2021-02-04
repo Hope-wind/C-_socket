@@ -82,6 +82,6 @@ int main()
 {
     Mosaic_Desktop();
     return 0;
-};
+}
   
 
