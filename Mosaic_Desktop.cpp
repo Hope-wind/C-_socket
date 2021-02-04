@@ -1,6 +1,10 @@
-#include<windows.h>
+#include <stdio.h>
+#include <Windows.h>
+#include <string> 
+#include <conio.h>
 
-#define NUM 1024;
+
+#define NUM 1024
 
 void Mosaic_Desktop()
 {
