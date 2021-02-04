@@ -9,7 +9,7 @@
 int main()
 {
 		HWND hwnd = GetDesktopWindow();
-		int rects[NULL][4];
+		int rects[][4];
 		while(true)
 		{
 
