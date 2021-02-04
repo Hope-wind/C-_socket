@@ -21,7 +21,7 @@ void Mosaic_Desktop()
 
 		//获得桌面窗口的设备上下文
 		HDC hdcSrc = GetDCEx(hwnd,NULL,
-						DCX_CACHEa |  //高速缓存)
+						DCX_CACHE |  //高速缓存)
 						DCX_LOCKWINDOWUPDATE);
 		
 		//创建一个内存设备上下文
@@ -36,7 +36,7 @@ void Mosaic_Desktop()
 		HBITMAP hBitmap = CreateCompatibleBitmap(hdcSrc,cx,cy);
 
 		//位图和内存设备的关联
-		SelectorObject(hdcMen,HBitmap);
+		SelectObject(hdcMem,hBitmap);
 
 		//切割区域
 		//随机数
@@ -61,7 +61,7 @@ void Mosaic_Desktop()
 								hdcSrc,
 								rects[i][0],
 								rects[i][1],
-								SPCCOPY //拷贝方式
+								SRCCOPY //拷贝方式
 					  );
 
 				BitBlt(hdcSrc,rects[i][2],rects[i][3],cx,cy,hdcMem,0,0,SRCCOPY);
@@ -78,9 +78,10 @@ void Mosaic_Desktop()
 		
 }
 
-int main(){
+int main()
+{
     Mosaic_Desktop();
     return 0;
-}
+};
   
 
