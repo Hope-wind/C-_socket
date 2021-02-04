@@ -1,3 +1,7 @@
+#include<windows.h>
+
+#define NUM 1024;
+
 void Mosaic_Desktop()
 {
 	HWND hwnd = GetDesktopWindow();
